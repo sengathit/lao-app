@@ -85,7 +85,7 @@ export class VocabularyService {
             word : 'ten',
             cat : 'numbers'
         }
-    ]
+    ];
 
     daysOfWeek = [
         {
@@ -130,5 +130,72 @@ export class VocabularyService {
             word : 'saturday',
             cat : 'day-of-week'
         }
+    ];
+
+    colors = [
+        {
+            lao: 'ສີແດງ',
+            eng: 'si dang',
+            word : 'red',
+            audio: 'red.mp4',
+            cat : 'colors'
+        },
+        {
+            lao: 'ສີຂຽວ',
+            eng: 'si keo',
+            word : 'green',
+            audio: 'green.mp4',
+            cat : 'colors'
+        },
+        {
+            lao: 'ສີຟ້າ',
+            eng: 'si fa',
+            word : 'blue',
+            audio: 'blue.mp4',
+            cat : 'colors'
+        },
+        {
+            lao: 'ສີດໍມ',
+            eng: 'si dum',
+            word : 'black',
+            audio: 'black.mp4',
+            cat : 'colors'
+        },
+        {
+            lao: 'ສີຂາວ',
+            eng: 'si khao',
+            word : 'white',
+            audio: 'white.mp4',
+            cat : 'colors'
+        },
+        {
+            lao: 'ສີເຫຼືອງ',
+            eng: 'si leung',
+            word : 'yellow',
+            audio: 'yellow.mp4',
+            cat : 'colors'
+        },
+        {
+            lao: 'ສີບົວ',
+            eng: 'si bua',
+            word : 'pink',
+            audio: 'pink.mp4',
+            cat : 'colors'
+        },
+        {
+            lao: 'ສີນ້ໍາຕານ',
+            eng: 'si noatan',
+            word : 'brown',
+            audio: 'brown.mp4',
+            cat : 'colors'
+        },
+        {
+            lao: 'ສີສົ້ມ',
+            eng: 'si sourcemaps',
+            word : 'orange',
+            audio: 'orange.mp4',
+            cat : 'colors'
+        },
     ]
+
 }
