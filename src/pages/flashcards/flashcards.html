@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row p-3">
+        <button class="btn btn-outline-light col-12 btn-lg new-card" (click)="randomizer()">New Card</button>
+    </div>
+    <div class="row p-3">
+        <div
+            [@flip]="flipState"
+            class="flashcard col-12 col-sm-6">
+            <div class="front text-center">
+                <span class="lao-serif-extralight
+                front-alphabet">{{this.selectedAlphabet.glyph}}</span>
+                <div
+                    class="flipper"
+                    (click)="flipCard('back')"><ion-icon class="flipBtn" name="refresh-circle"></ion-icon>
+</div>
+            </div>
+            <div class="back text-center">
+                <div class="glyphName pt-5 pb-3" (click)="playAudio(selectedAlphabet)">
+                    <span class="lao-serif-extralight">{{selectedAlphabet.glyph}}</span>
+                    <span class="mx-3">{{selectedAlphabet.name}}</span>
+                    <span><ion-icon name="volume-up"></ion-icon></span>
+                </div>
+                <div class="example">
+                    <span>{{selectedAlphabet.example.word}}</span> :
+                    <span class="mx-3 lao-serif-extralight">{{selectedAlphabet.example.lao}}</span>
+                    <span><ion-icon name="volume-up"></ion-icon></span>
+                </div>
+                <div
+                    class="flipper"
+                    (click)="flipCard('front')"><ion-icon class="flipBtn" name="refresh-circle"></ion-icon>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<ion-footer>
+
+  <ion-navbar>
+    <ion-title>Back</ion-title>
+  </ion-navbar>
+
+</ion-footer>

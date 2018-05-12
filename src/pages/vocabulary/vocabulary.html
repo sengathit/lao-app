@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div
+        class="row"
+        [ngClass]="{'pt-5' : i == 0 }"
+        *ngFor="let category of categories; let i = index;"
+        (click)="goToVocab(category.name)">
+        <div class="col-12 col-sm-6 offset-sm-3 mb-3 d-block">
+            <button class="btn btn-outline-light text-center w-100">{{category.name}} | <span class="lao-serif-extralight">{{category.lao}}</span></button>
+        </div>
+    </div>
+</div>
+<ion-footer>
+    <ion-navbar>
+      <ion-title>vocabulary</ion-title>
+    </ion-navbar>
+</ion-footer>

@@ -1,0 +1,16 @@
+$catVocabulary : #BA9077;
+$textColor : #fff;
+
+page-vocabulary {
+    .container-fluid {
+        height: 100%;
+        background-color: $catVocabulary;
+        color: $textColor;
+        button {
+            font-size: 2em;
+            .lao-serif-extralight {
+                font-family: 'serif-extralight';
+            }
+        }
+    }
+}

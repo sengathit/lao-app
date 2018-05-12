@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div
+            *ngFor="let mark of tonalMarks; let i = index"
+            text-center
+            class="text-center letter-container"
+            [ngClass]="{'activeLetter' : i == activeLetter}"
+            (click)="changeAlphabet(mark,i)">
+            <span class="lao-serif-extralight d-block">{{mark.glyph}}</span>
+            <span class="english-name d-block">{{mark.name}}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p class="alphabetGlyph lao-serif-extralight"  text-center>{{currentLetter.glyph}}</p>
+            <p class="alphabetName" text-center>{{currentLetter.name}}</p>
+            <p class="tonalDescription">{{currentLetter.description}}</p>
+        </div>
+    </div>
+</div>
+<ion-footer>
+    <ion-navbar>
+      <ion-title>Back</ion-title>
+    </ion-navbar>
+</ion-footer>

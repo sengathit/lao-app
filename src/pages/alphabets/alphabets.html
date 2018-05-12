@@ -1,0 +1,74 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 p-3 text-center">
+            <div class="dropdown">
+                <button [ngClass]="{'active' : notActive != defaultC }" class="w-100 consonantBtn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{setConsonants()}}</button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a
+                        class="dropdown-item"
+                        *ngFor="let consonant of consonants"
+                        (click)="selectGroup(consonant)">{{consonant}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 p-3 text-center">
+            <div class="dropdown">
+                <button [ngClass]="{'active' : notActive != defaultV }" class="w-100 vowelBtn btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{setVowels()}}</button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a
+                        class="dropdown-item"
+                        *ngFor="let vowel of vowels"
+                        (click)="selectGroup(vowel)">{{vowel}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div
+            *ngFor="let group of selectedGroup; let i = index"
+            class="text-center letter-container"
+            [ngClass]="{'activeLetter' : i == activeLetter}"
+            (click)="changeAlphabet(group,i)">
+            <span class="lao-serif-extralight d-block">{{group.glyph}}</span>
+            <span class="english-name d-block">{{group.name}}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p class="alphabetGlyph text-center lao-serif-extralight">{{selectedAlphabet.glyph}}</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <p [ngClass]="{'col-5':selectedAlphabet.name == 'mai kon' || selectedAlphabet.name == 'mai kan','col-4':selectedAlphabet.name != 'mai kon' || selectedAlphabet.name != 'mai kan'}" class="alphabetName text-right">{{selectedAlphabet.name}}</p>
+        <p class="col-2 playBtn" (click)="playAlphabet(selectedAlphabet.audio)">
+            <ion-icon name="volume-up"></ion-icon>
+        </p>
+    </div>
+    <div class="row justify-content-center mt-2">
+        <p
+            class="col-6 text-center alphabetExample p-2"
+            (click)="showExampleLetter(selectedAlphabet)">example : <span class="lao-serif-extralight">{{selectedAlphabet.glyph}}</span></p>
+    </div>
+    <div
+        class="letterOverlay"
+        [@example-overlay]="letterOverlayState">
+        <div class="letterOverlayContainer">
+            <div class="main-example row justify-content-center">
+                <div class="d-block p-3 exampleBox">
+                    <span class="lao-serif-extralight d-block text-center">{{selectedAlphabet.example.lao}} <ion-icon name="volume-up"></ion-icon></span>
+                    <span class="eng-phonetics d-block text-center">{{selectedAlphabet.example.eng}}</span>
+                    <span class="eng-word d-block text-center">{{selectedAlphabet.example.word}}</span>
+                    <p class="example-description">{{selectedAlphabet.description}}</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <button class="btn btn-outline-secondary" (click)="letterOverlayState = 'close'">close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<ion-footer>
+    <ion-navbar>
+      <ion-title>Back</ion-title>
+    </ion-navbar>
+</ion-footer>

@@ -1,0 +1,9 @@
+$textColor : #fff;
+
+page-cat-name {
+    .container-fluid {
+        height: 100%;
+        background-color: $catVocabulary;
+        color: $textColor;
+    }
+}

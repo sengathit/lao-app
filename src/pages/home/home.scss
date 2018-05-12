@@ -1,3 +1,39 @@
+$catAlphabets : #1D2120;
+$catTonalMarks : #5A5C51;
+$catVocabulary : #BA9077;
+$catFlashcards : #BCD5D1;
+$textColor : #fff;
+
 page-home {
+    .grid {
+        padding: 0;
+
+        .alphabets {
+            background-color: $catAlphabets
+        }
+
+        .tonal-marks {
+            background-color: $catTonalMarks
+        }
+
+        .vocabulary {
+            background-color: $catVocabulary
+        }
+
+        .flashcards {
+            background-color: $catFlashcards
+        }
+
+        ion-col {
+            padding: 0;
+            height: 25vh;
+            p {
+                color: $textColor;
+                line-height: 25vh;
+                font-size: 2em;
+                margin: 0
+            }
+        }
+    }
 
 }

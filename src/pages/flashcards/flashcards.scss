@@ -1,0 +1,95 @@
+$frontside: #fff;
+$backside: #343434;
+$radius: 20px;
+$flipperHW: 50px;
+$flipperRadius: 50%;
+$catFlashcards : #BCD5D1;
+
+page-flashcards {
+    .container-fluid {
+        background-color: $catFlashcards;
+        height: 100vh;
+        color: $textColor;
+
+        .new-card {
+            font-size: 1.75em;
+            padding: 10px;
+            font-weight: bold
+        }
+
+        .flashcard {
+            box-sizing: border-box;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            position: relative;
+            height: 60vh;
+            .front,
+            .back {
+                backface-visibility: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                box-shadow: 0 3px 15px rgba(0,0,0,0.75);
+                border-radius: $radius;
+                .lao-serif-extralight {
+                    font-family: 'serif-extralight';
+                }
+            }
+
+            .flipper {
+                height: $flipperHW;
+                width: $flipperHW;
+                border-radius: $flipperRadius;
+                margin: 0 auto;
+                position: absolute;
+                bottom: 50px;
+                left: 45%;
+                .flipBtn {
+                    font-size: 4.5em
+                }
+            }
+
+            .fa-sync {
+                font-size: 3em;
+            }
+
+            .front {
+                background-color: $frontside;
+                z-index: 2;
+                color: $backside;
+                transform: rotateY(0deg);
+                .front-alphabet {
+                    font-size: 13em;
+                }
+
+                .fa-sync {
+                    color: $backside;
+                }
+            }
+
+            .back {
+                background-color: $backside;
+                color: $frontside;
+                transform: rotateY(180deg);
+                .fa-sync {
+                    color: $frontside;
+                }
+
+                .glyphName {
+                    span {
+                        font-size: 2em;
+                    }
+                }
+                .example {
+                    span {
+                        font-size: 1.5em
+                    }
+                }
+
+            }
+        }
+    }
+
+}
