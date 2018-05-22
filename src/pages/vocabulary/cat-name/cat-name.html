@@ -1,5 +1,8 @@
 <div class="container-fluid">
-    {{title}}
+    <h1 text-center class="p-4 border-bottom">{{title}}</h1>
+    <div *ngFor="let cat of currentSet">
+        <ion-icon name="volume-up"></ion-icon> | {{cat.word}} | {{cat.lao}} | {{cat.eng}}
+    </div>
 </div>
 <ion-footer>
   <ion-navbar>

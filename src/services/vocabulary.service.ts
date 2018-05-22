@@ -1,4 +1,12 @@
 export class VocabularyService {
+    currentSet:{
+        lao: string,
+        eng: string,
+        word : string,
+        audio: string,
+        cat : string
+    }[] = []
+
     categories = [
         {
             name: 'numbers',
@@ -13,7 +21,7 @@ export class VocabularyService {
             lao: 'ເດືອນ'
         },
         {
-            name: 'color',
+            name: 'colors',
             lao: 'ສີ'
         }
     ];
@@ -23,66 +31,77 @@ export class VocabularyService {
             lao: 'ສູນ',
             eng: 'suhn',
             word : 'zero',
+            audio: 'zero.mp4',
             cat : 'numbers'
         },
         {
             lao: 'ຫນຶ່ງ',
             eng: 'nung',
             word : 'one',
+            audio: 'outline.mp4',
             cat : 'numbers'
         },
         {
             lao: 'ສອງ',
             eng: 'song',
             word : 'two',
+            audio: 'two.mp4',
             cat : 'numbers'
         },
         {
             lao: 'ສາມ',
             eng: 'sahm',
             word : 'three',
+            audio: 'three.mp4',
             cat : 'numbers'
         },
         {
             lao: 'ສີ່',
             eng: 'see',
             word : 'four',
+            audio: 'four.mp4',
             cat : 'numbers'
         },
         {
             lao: 'ຫ້າ',
             eng: 'haa',
             word : 'five',
+            audio: 'five.mp4',
             cat : 'numbers'
         },
         {
             lao: 'ຫົກ',
             eng: 'hok',
             word : 'six',
+            audio: 'six.mp4',
             cat : 'numbers'
         },
         {
             lao: 'ເຈັດ',
             eng: 'ghet',
             word : 'seven',
+            audio: 'seven.mp4',
             cat : 'numbers'
         },
         {
             lao: 'ແປດ',
             eng: 'bhed',
             word : 'eight',
+            audio: 'eight.mp4',
             cat : 'numbers'
         },
         {
             lao: 'ເກົ້າ',
             eng: 'ghao',
             word : 'nine',
+            audio: 'nine.mp4',
             cat : 'numbers'
         },
         {
             lao: 'ສິບ',
             eng: 'sib',
             word : 'ten',
+            audio: 'ten.mp4',
             cat : 'numbers'
         }
     ];
@@ -92,42 +111,49 @@ export class VocabularyService {
             lao: 'ວັນ ທິດ',
             eng: 'wahn tit',
             word : 'sunday',
+            audio: 'sunday.mp4',
             cat : 'day-of-week'
         },
         {
             lao: 'ວັນ ຈັນ',
             eng: 'wahn jaan',
             word : 'monday',
+            audio: 'monday.mp4',
             cat : 'day-of-week'
         },
         {
             lao: 'ວັນ ຄັນ',
             eng: 'wahn kaan',
             word : 'tuesday',
+            audio: 'tuesday.mp4',
             cat : 'day-of-week'
         },
         {
             lao: 'ວັນ ພຸດ',
             eng: 'wahn puut',
             word : 'wednesday',
+            audio: 'wednesday.mp4',
             cat : 'day-of-week'
         },
         {
             lao: 'ວັນ ພະຫັດ',
             eng: 'wahn pahaat',
             word : 'thursday',
+            audio: 'thursday.mp4',
             cat : 'day-of-week'
         },
         {
             lao: 'ວັນ ສຸກ',
             eng: 'wahn sook',
             word : 'friday',
+            audio: 'friday.mp4',
             cat : 'day-of-week'
         },
         {
             lao: 'ວັນ ເສົາ',
             eng: 'wahn sowel',
             word : 'saturday',
+            audio: 'saturday.mp4',
             cat : 'day-of-week'
         }
     ];
@@ -195,7 +221,19 @@ export class VocabularyService {
             word : 'orange',
             audio: 'orange.mp4',
             cat : 'colors'
-        },
+        }
     ]
+
+    getCategories(cat: string){
+        if(cat === 'numbers'){
+            this.currentSet = this.numbers;
+        }else if(cat === 'days-of-week'){
+            this.currentSet = this.daysOfWeek;
+        }else if(cat === 'colors'){
+            this.currentSet = this.colors;
+        }
+
+        return this.currentSet;
+    }
 
 }

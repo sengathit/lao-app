@@ -11,6 +11,13 @@ import { CatNamePage } from './cat-name/cat-name';
 export class VocabularyPage implements OnInit {
 
     categories:{name: string, lao: string}[] = [];
+    activeSet:{
+        lao: string,
+        eng: string,
+        word : string,
+        audio: string,
+        cat : string
+    }[] = [];
 
     constructor(
         private modalCtrl: ModalController,
@@ -22,7 +29,8 @@ export class VocabularyPage implements OnInit {
     }
 
     goToVocab(cat: string){
-        let modal = this.modalCtrl.create(CatNamePage, {category : cat});
+        this.activeSet = this.vocabularyService.getCategories(cat);
+        let modal = this.modalCtrl.create(CatNamePage, {category : cat,active: this.activeSet});
         modal.present();
     }
 
