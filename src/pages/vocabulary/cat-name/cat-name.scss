@@ -2,8 +2,13 @@ $textColor : #fff;
 
 page-cat-name {
     .container-fluid {
+        overflow: scroll;
         height: 100%;
         background-color: $catVocabulary;
         color: $textColor;
+
+        .lao-word{
+            font-size: 1.3em;
+        }
     }
 }

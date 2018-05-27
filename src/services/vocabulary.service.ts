@@ -1,4 +1,6 @@
 export class VocabularyService {
+    alphabetAudio = new Audio();
+
     currentSet:{
         lao: string,
         eng: string,
@@ -31,77 +33,77 @@ export class VocabularyService {
             lao: 'ສູນ',
             eng: 'suhn',
             word : 'zero',
-            audio: 'zero.mp4',
+            audio: 'zero.m4a',
             cat : 'numbers'
         },
         {
             lao: 'ຫນຶ່ງ',
             eng: 'nung',
             word : 'one',
-            audio: 'outline.mp4',
+            audio: 'one.m4a',
             cat : 'numbers'
         },
         {
             lao: 'ສອງ',
             eng: 'song',
             word : 'two',
-            audio: 'two.mp4',
+            audio: 'two.m4a',
             cat : 'numbers'
         },
         {
             lao: 'ສາມ',
             eng: 'sahm',
             word : 'three',
-            audio: 'three.mp4',
+            audio: 'three.m4a',
             cat : 'numbers'
         },
         {
             lao: 'ສີ່',
             eng: 'see',
             word : 'four',
-            audio: 'four.mp4',
+            audio: 'four.m4a',
             cat : 'numbers'
         },
         {
             lao: 'ຫ້າ',
             eng: 'haa',
             word : 'five',
-            audio: 'five.mp4',
+            audio: 'five.m4a',
             cat : 'numbers'
         },
         {
             lao: 'ຫົກ',
             eng: 'hok',
             word : 'six',
-            audio: 'six.mp4',
+            audio: 'six.m4a',
             cat : 'numbers'
         },
         {
             lao: 'ເຈັດ',
             eng: 'ghet',
             word : 'seven',
-            audio: 'seven.mp4',
+            audio: 'seven.m4a',
             cat : 'numbers'
         },
         {
             lao: 'ແປດ',
             eng: 'bhed',
             word : 'eight',
-            audio: 'eight.mp4',
+            audio: 'eight.m4a',
             cat : 'numbers'
         },
         {
             lao: 'ເກົ້າ',
             eng: 'ghao',
             word : 'nine',
-            audio: 'nine.mp4',
+            audio: 'nine.m4a',
             cat : 'numbers'
         },
         {
             lao: 'ສິບ',
             eng: 'sib',
             word : 'ten',
-            audio: 'ten.mp4',
+            audio: 'ten.m4a',
             cat : 'numbers'
         }
     ];
@@ -111,49 +113,49 @@ export class VocabularyService {
             lao: 'ວັນ ທິດ',
             eng: 'wahn tit',
             word : 'sunday',
-            audio: 'sunday.mp4',
+            audio: 'sunday.m4a',
             cat : 'day-of-week'
         },
         {
             lao: 'ວັນ ຈັນ',
             eng: 'wahn jaan',
             word : 'monday',
-            audio: 'monday.mp4',
+            audio: 'monday.m4a',
             cat : 'day-of-week'
         },
         {
             lao: 'ວັນ ຄັນ',
             eng: 'wahn kaan',
             word : 'tuesday',
-            audio: 'tuesday.mp4',
+            audio: 'tuesday.m4a',
             cat : 'day-of-week'
         },
         {
             lao: 'ວັນ ພຸດ',
             eng: 'wahn puut',
             word : 'wednesday',
-            audio: 'wednesday.mp4',
+            audio: 'wednesday.m4a',
             cat : 'day-of-week'
         },
         {
             lao: 'ວັນ ພະຫັດ',
             eng: 'wahn pahaat',
             word : 'thursday',
-            audio: 'thursday.mp4',
+            audio: 'thursday.m4a',
             cat : 'day-of-week'
         },
         {
             lao: 'ວັນ ສຸກ',
             eng: 'wahn sook',
             word : 'friday',
-            audio: 'friday.mp4',
+            audio: 'friday.m4a',
             cat : 'day-of-week'
         },
         {
             lao: 'ວັນ ເສົາ',
             eng: 'wahn sowel',
             word : 'saturday',
-            audio: 'saturday.mp4',
+            audio: 'saturday.m4a',
             cat : 'day-of-week'
         }
     ];
@@ -163,66 +165,68 @@ export class VocabularyService {
             lao: 'ສີແດງ',
             eng: 'si dang',
             word : 'red',
-            audio: 'red.mp4',
+            audio: 'red.m4a',
             cat : 'colors'
         },
         {
             lao: 'ສີຂຽວ',
             eng: 'si keo',
             word : 'green',
-            audio: 'green.mp4',
+            audio: 'green.m4a',
             cat : 'colors'
         },
         {
             lao: 'ສີຟ້າ',
             eng: 'si fa',
             word : 'blue',
-            audio: 'blue.mp4',
+            audio: 'blue.m4a',
             cat : 'colors'
         },
         {
             lao: 'ສີດໍມ',
             eng: 'si dum',
             word : 'black',
-            audio: 'black.mp4',
+            audio: 'black.m4a',
             cat : 'colors'
         },
         {
             lao: 'ສີຂາວ',
             eng: 'si khao',
             word : 'white',
-            audio: 'white.mp4',
+            audio: 'white.m4a',
             cat : 'colors'
         },
         {
             lao: 'ສີເຫຼືອງ',
             eng: 'si leung',
             word : 'yellow',
-            audio: 'yellow.mp4',
+            audio: 'yellow.m4a',
             cat : 'colors'
         },
         {
             lao: 'ສີບົວ',
             eng: 'si bua',
             word : 'pink',
-            audio: 'pink.mp4',
+            audio: 'pink.m4a',
             cat : 'colors'
         },
         {
             lao: 'ສີນ້ໍາຕານ',
             eng: 'si noatan',
             word : 'brown',
-            audio: 'brown.mp4',
+            audio: 'brown.m4a',
             cat : 'colors'
         },
         {
             lao: 'ສີສົ້ມ',
-            eng: 'si sourcemaps',
+            eng: 'si som',
             word : 'orange',
-            audio: 'orange.mp4',
+            audio: 'orange.m4a',
             cat : 'colors'
         }
     ]
+
+    month = [];
 
     getCategories(cat: string){
         if(cat === 'numbers'){
@@ -231,6 +235,8 @@ export class VocabularyService {
             this.currentSet = this.daysOfWeek;
         }else if(cat === 'colors'){
             this.currentSet = this.colors;
+        }else if (cat === 'month'){
+            this.currentSet = this.month;
         }
 
         return this.currentSet;
