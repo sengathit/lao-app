@@ -10,7 +10,6 @@ import { CategoryModel } from '../../../models/category.model';
 
 export class CatNamePage implements OnInit {
     title: string = '';
-    categories: {name: string, lao: string}[] = [];
     currentSet = [];
     alphabetAudio = new Audio();
     constructor(
@@ -22,7 +21,6 @@ export class CatNamePage implements OnInit {
     ngOnInit(){
         this.title = this.navParams.get('category');
         this.currentSet = this.navParams.get('active');
-
     }
 
     playCategory(cat: CategoryModel){
