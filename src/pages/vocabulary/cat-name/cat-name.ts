@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ViewController, NavParams } from 'ionic-angular';
+import { ViewController, NavParams, NavController } from 'ionic-angular';
 import { VocabularyService } from '../../../services/vocabulary.service';
 import { CategoryModel } from '../../../models/category.model';
 
@@ -14,6 +14,7 @@ export class CatNamePage implements OnInit {
     alphabetAudio = new Audio();
     constructor(
         private viewCtrl: ViewController,
+        private navController: NavController,
         private navParams: NavParams,
         private vocabularyService: VocabularyService
     ){}
@@ -29,6 +30,7 @@ export class CatNamePage implements OnInit {
         this.alphabetAudio.src = './assets/media/vocabulary/' + cat.cat + '/' + cat.audio;
         this.alphabetAudio.load();
         this.alphabetAudio.play();
+        console.log(cat.audio);
     }
 
     dismissModal(){

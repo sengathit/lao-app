@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <h1 text-center class="p-4">{{title}}</h1>
-    <div *ngFor="let cat of currentSet">
+    <div *ngFor="let cat of currentSet" block>
         <button
             class="p-1 mb-3"
             ion-button
@@ -8,7 +8,7 @@
             color="light"
             block
             (click)="playCategory(cat)">
-            <ion-icon name="volume-up"></ion-icon>&nbsp;&nbsp;{{cat.word}}&nbsp;&nbsp;<span class="lao-word">{{cat.lao}}</span>&nbsp;&nbsp;{{cat.eng}}
+                <ion-icon name="volume-up"></ion-icon>&nbsp;&nbsp;{{cat.word}}&nbsp;&nbsp;<span class="lao-word">{{cat.lao}}</span>&nbsp;&nbsp;{{cat.eng}}
         </button>
     </div>
 </div>
