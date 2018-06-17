@@ -7,6 +7,7 @@ import { AlphabetsService } from '../services/alphabets.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { VocabularyService } from '../services/vocabulary.service';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -46,6 +47,7 @@ import { CatNamePage } from '../pages/vocabulary/cat-name/cat-name';
     SplashScreen,
     AlphabetsService,
     VocabularyService,
+    ScreenOrientation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
