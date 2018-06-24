@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.sengathitlavanh.laoapp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>lao-app</name>
+    <name>lao alphabets</name>
     <description>Basic Lao Alphabets</description>
     <author email="sengathit.l@gmail.com" href="http://sengathitlavanh.com">PhoenixRise</author>
     <content src="index.html" />

@@ -146,14 +146,6 @@ export class AlphabetsPage implements OnInit {
             }
         }
 
-        showExampleLetter(selectedAlphabet){
-            if(this.letterOverlayState == 'close'){
-                this.letterOverlayState = 'open';
-            }else if(this.letterOverlayState == 'open'){
-                this.letterOverlayState = 'close';
-            }
-        }
-
         playAlphabet(audio){
             this.alphabetAudio.src = './assets/media/' + this.active + '/' + audio;
             this.alphabetAudio.load();

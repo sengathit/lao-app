@@ -37,10 +37,6 @@ export class VocabularyService {
         {
             name: 'verb',
             lao: ''
-        },
-        {
-            name: 'animal',
-            lao: ''
         }
     ];
 
@@ -352,8 +348,8 @@ export class VocabularyService {
             cat : 'adjective'
         },
         {
-            lao: 'XXX',
-            eng: 'theah',
+            lao: 'ສັ້ນ',
+            eng: 'sahn',
             word : 'short',
             audio: 'short.m4a',
             cat : 'adjective'
@@ -366,14 +362,14 @@ export class VocabularyService {
             cat : 'adjective'
         },
         {
-            lao: 'XXX',
+            lao: 'ເໝັນ',
             eng: 'maen',
             word : 'stink',
             audio: 'stink.m4a',
             cat : 'adjective'
         },
         {
-            lao: 'XXX',
+            lao: 'ໃຫຍ່',
             eng: 'nyai',
             word : 'big',
             audio: 'big.m4a',
@@ -394,7 +390,7 @@ export class VocabularyService {
             cat : 'adjective'
         },
         {
-            lao: 'XXX',
+            lao: 'ໜັກ',
             eng: 'kang',
             word : 'hard',
             audio: 'hard.m4a',
@@ -426,13 +422,6 @@ export class VocabularyService {
             eng: 'yaen',
             word : 'cold',
             audio: 'cold.m4a',
-            cat : 'adjective'
-        },
-        {
-            lao: 'XXX',
-            eng: 'jahng',
-            word : 'bland',
-            audio: 'bland.m4a',
             cat : 'adjective'
         },
         {
@@ -572,79 +561,6 @@ export class VocabularyService {
         }
     ];
 
-    animal = [
-        {
-            lao: 'ໄກ່',
-            eng: 'gai',
-            word : 'chicken',
-            audio: 'chicken.m4a',
-            cat : 'animal'
-        },
-        {
-            lao: 'ຫມາ',
-            eng: 'ma',
-            word : 'dog',
-            audio: 'dog.m4a',
-            cat : 'animal'
-        },
-        {
-            lao: 'XXX',
-            eng: 'mel',
-            word : 'cat',
-            audio: 'cat.m4a',
-            cat : 'animal'
-        },
-        {
-            lao: 'ມ້າ',
-            eng: 'maa',
-            word : 'horse',
-            audio: 'horse.m4a',
-            cat : 'animal'
-        },
-        {
-            lao: 'ປາ',
-            eng: 'bpah',
-            word : 'fish',
-            audio: 'fish.m4a',
-            cat : 'animal'
-        },
-        {
-            lao: 'ຊ້າງ',
-            eng: 'sang',
-            word : 'elephant',
-            audio: 'elephant.m4a',
-            cat : 'animal'
-        },
-        {
-            lao: 'XXX',
-            eng: 'bphetd',
-            word : 'duck',
-            audio: 'duck.m4a',
-            cat : 'animal'
-        },
-        {
-            lao: 'XXX',
-            eng: 'leing',
-            word : 'monkey',
-            audio: 'monkey.m4a',
-            cat : 'animal'
-        },
-        {
-            lao: 'XXX',
-            eng: 'singh',
-            word : 'tiger',
-            audio: 'tiger.m4a',
-            cat : 'animal'
-        },
-        {
-            lao: 'XXX',
-            eng: 'suah',
-            word : 'lion',
-            audio: 'lion.m4a',
-            cat : 'animal'
-        }
-    ];
-
     getCategories(cat: string){
         if(cat === 'numbers'){
             this.currentSet = this.numbers;
@@ -660,8 +576,6 @@ export class VocabularyService {
             this.currentSet = this.transportation;
         }else if (cat === 'verb'){
             this.currentSet = this.verb;
-        }else if (cat === 'animal'){
-            this.currentSet = this.animal;
         }
 
         return this.currentSet;
